@@ -1,5 +1,7 @@
 import { promises as fs } from "fs"
 
+// Criando um arquivo JSON para todos os estados. Failed: não consegui criar a pasta.
+
 async function readAndCreate() {
     try {
 
@@ -9,10 +11,10 @@ async function readAndCreate() {
         states.forEach(state => {
             let i = state.ID
             let filteredCities = cities.filter(city => city.Estado == i)
-            fs.writeFile(state.Sigla + '.json', JSON.stringify(filteredCities))
-        });
+            fs.writeFile('./states/' + `${state.Sigla}.json`, JSON.stringify(filteredCities))
+            
+        })
         
-
     } catch (err) {
         console.log(err)
     }
