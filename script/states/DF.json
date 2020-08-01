@@ -1,1 +1,5 @@
-[{"ID":"882","Nome":"Brasília","Estado":"7"}]
+{
+	"Cities": [
+		"Brasília"
+	]
+}
